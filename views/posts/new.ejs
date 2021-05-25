@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %> 
+<div class="row">
+    <h1 class="text-center">Make a new post</h1>
+    <div class="col-6 offset-3">
+    
+
+    <form action="/posts" method="POST" novalidate class="validated-form">
+        <div class="mb-3">
+            
+            <label for="author" class="form-label">Author's name</label>
+            <input class="form-control" type="text" id="author" placeholder="Author name" name="author" required>
+            <div class="valid-feedback">Looks good!</div>
+        
+        </div>
+        <div class="mb-3">
+            
+                <label class="form-label" for="state" >Select State</label>
+                <select class="form-select" name="state" id="state" required>
+                <option selected disabled value="">Select State</option>
+                <% for(let state of states){ %>
+                    <option value="<%=state%>" ><%=state%></option>
+                <% } %> 
+                </select> 
+  
+        </div>
+
+        <div class="mb-3">
+
+        
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" name="description" id="descripton" cols="20" rows="5" required></textarea>
+             <div class="valid-feedback">Looks good!</div>
+        </div>
+        <button class="btn btn-primary">Post</button>
+    </form>
+
+</div>
+</div>
+
+
+

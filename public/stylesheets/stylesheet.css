@@ -1,0 +1,28 @@
+
+.navbar-color {
+    color: white;
+    background-color:#A9D3FF;
+}
+form {
+    display: flex;
+    align-items: center;
+  }
+  
+  textarea {
+    width: 90%;
+    resize: none;
+  }
+  
+  #submit {
+    width: 10%;
+  }
+
+
+  .truncate{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+
+  
